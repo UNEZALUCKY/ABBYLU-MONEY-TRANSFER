@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #161515; /* Changed to a single black background color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,6 @@ button {
 button:hover {
     background-color: #94853d; /* Changed hover color */
 }
-
 /* Header styling */
 header {
     background-color: #4CAF50; /* Existing color */
@@ -52,11 +51,20 @@ header {
     font-family: Tahoma, sans-serif; /* Updated font style */
     border: 2px solid #45a049; /* New border color */
     font-size: 24px; /* Added size to header */
+    transition: background-color 0.5s ease; /* Smooth transition for background color change */
 }
 
-/* Hover effect for header */
-header:hover {
-    background-color: #a08645; /* Hover color for header */
+
+
+/* Automatic color change */
+@keyframes colorChange {
+    50% { background-color: #1b481d; }
+    50% { background-color: #27224d; }
+    50% { background-color: #2a2d1e; }
+}
+
+header {
+    animation: colorChange 5s infinite;
 }
 
 /* Social media icons */
@@ -79,6 +87,17 @@ header:hover {
     color: #000000;
 }
 
+/* Footer styling */
+footer {
+    background-color: #188018;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px; /* Added padding to footer */
+    position: relative; /* Ensures it stays at the bottom */
+    margin-top:75px;
+    width: 300px;
+}
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
     .converter-container {
@@ -86,13 +105,31 @@ header:hover {
     }
 }
 
-/* Dynamic background color change after some minutes */
-body {
-    animation: changeBackground 5s infinite;
+/* Removed dynamic background color change as per instructions */
+.upload-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-@keyframes changeBackground {
-    70% { background-color: #64a388; }
-    70% { background-color: #1b1a1a; }
-    70% { background-color: #a087fc; }
+.form-control {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+.payment-methods {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center the payment methods */
+    max-width: 400px; /* Keep the width consistent */
+}
+
+.list-group-item {
+    background-color: #ffffff; /* White background for list items */
+    border: 1px solid #ddd; /* Border for list items */
 }
