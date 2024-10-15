@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RBLU Money Transfer</title>
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styl.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,7 +12,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #292828; /* Changed to a darker background color */
             display: flex;
             flex-direction: column;  /* Change to column for vertical stacking */
             justify-content: flex-start; /* Align items at the start */
@@ -41,7 +41,7 @@
 
         button {
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Changed to a more vibrant green */
             color: white;
             border: none;
             border-radius: 4px;
@@ -50,7 +50,7 @@
         }
 
         button:hover {
-            background-color: #94853d;
+            background-color: #94853d; /* Changed hover color to a darker green */
         }
 
         header {
@@ -77,7 +77,7 @@
         .fa-twitter:hover,
         .fa-linkedin:hover,
         .fa-twitch:hover {
-            color: #821932;
+            color: #821932; /* Changed hover color to a darker red */
         }
 
         .fab {
@@ -86,7 +86,7 @@
 
         /* Footer styling */
         footer {
-            background-color: #188018;
+            background-color: #188018; /* Changed to a more vibrant green */
             color: white;
             text-align: center;
             padding: 10px;
@@ -115,18 +115,77 @@
     <p id="result"></p>
 </div>
 
+<div class="payment-methods container mt-4">
+    <h3 style="color: #307e96; font-size: 24px; font-weight: bold; text-align: center;">
+    PAYMENT METHODS</h3>
+    <button id="togglePaymentMethods" class="btn btn-primary" style="display: block; margin: 0 auto;">Click here to view payment methods</button>
+    
+    <div id="paymentInfo" style="display: none; margin-top: 20px;">
+        <h4>Rwanda</h4>
+        <ul class="list-group">
+            <li class="list-group-item">Mobile Money: <strong>+250 784 101 238</strong> (TUYISABE ELISE)</li>
+            <li class="list-group-item">Equity Bank: <strong>TUYISABE ELISE</strong> (Account Number:4006112846937 )</li>
+        </ul>
+
+        <h4>India</h4>
+        <p>Pay via QR Code:</p>
+        <img src="QRCODE.jpg" alt="QR Code for payments" style="width: 350px; height: auto;" />
+    </div>
+</div>
+
+<div class="col-lg-6">
+    <P style="color: #306575; font-size: 24px; font-weight: bold; text-align: center;">
+        MESSAGE BOX
+    </P>
+    <form id="contactForm" action="https://formspree.io/f/xrbzgpdw" method="POST" enctype="multipart/form-data">
+        <!-- Hidden inputs required by FormSubmit -->
+
+        <div class="form-group mt-2">
+            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group mt-2">
+            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group mt-2">
+            <input type="text" class="form-control" name="Subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group mt-2">
+            <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <div class="form-group mt-2">
+            <input type="file" class="form-control" name="file" placeholder="Upload Screenshot" required>
+        </div>
+    
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn btn-success mt-2">Send Message</button>
+    </form>
+
 <footer>
-    <div class="container p-4">
+  
         <p style="font-size: 22px; color: white; text-align: center;">Explore your currency conversion needs with RBLU Money Transfer.</p>
-        <div class="social-icons mt-4">
+        
             <p>CHAT TO US</p>
             <a href="https://www.instagram.com/uneza_90?igsh=a3A3YXkydGx6c3h5" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
             <a href="https://wa.link/22dbbw" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
-        </div>
-    </div>
+   
 </footer>
 
 <script src="converter.js"></script>
+<script>
+    document.getElementById("togglePaymentMethods").onclick = function() {
+        const paymentInfo = document.getElementById("paymentInfo");
+        if (paymentInfo.style.display === "none") {
+            paymentInfo.style.display = "block";
+            this.textContent = "Click here to hide payment methods";
+        } else {
+            paymentInfo.style.display = "none";
+            this.textContent = "Click here to view payment methods";
+        }
+    };
+</script>
 
 </body>
 </html>
+
