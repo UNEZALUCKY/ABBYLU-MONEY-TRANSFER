@@ -58,9 +58,8 @@ header {
 
 /* Automatic color change */
 @keyframes colorChange {
-    50% { background-color: #1b481d; }
-    50% { background-color: #27224d; }
-    50% { background-color: #2a2d1e; }
+    40% { background-color: #2f116e; }
+    60% { background-color: #13502e; }
 }
 
 header {
