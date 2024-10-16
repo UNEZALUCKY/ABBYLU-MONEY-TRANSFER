@@ -11,7 +11,7 @@ function convertCurrency() {
 
     const exchangeRates = {
         "RWF_INR": 0.059, // 1 RWF = 0.060 INR
-        "INR_RWF": 14.94   // 1 INR = 14.94 RWF
+        "INR_RWF": 14.782   // 1 INR = 14.94 RWF
     };
 
     let conversionKey = `${fromCurrency}_${toCurrency}`;
