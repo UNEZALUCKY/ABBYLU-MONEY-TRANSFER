@@ -1,2 +1,2 @@
-# RBLU-MONEY-TRANSFER
-Explore your currency conversion needs with RBLU Money Transfer.
+# MDELU-MONEY-TRANSFER
+Explore your currency conversion needs with MDELU Money Transfer.
