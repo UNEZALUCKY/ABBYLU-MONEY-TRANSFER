@@ -10,7 +10,7 @@ function convertCurrency() {
     }
 
     const exchangeRates = {
-        "RWF_INR": 0.0592, // 1 RWF = 0.0588 INR
+        "RWF_INR": 0.0587, // 1 RWF = 0.0588 INR
         "INR_RWF": 14.782,   // 1 INR = 14.94 RWF
     };
 
