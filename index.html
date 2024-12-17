@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MDELU Money Transfer</title>
+    <title>RBLU Money Transfer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styl.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -97,7 +97,7 @@
 <body>
 
 <div class="converter-container">
-    <header>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WELCOME TO MDELU &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MONEY TRANSFER</header>
+    <header>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WELCOME TO RBLU &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MONEY TRANSFER</header>
     <h2>Currency Converter</h2>
     <p>From:</p>
     <select id="fromCurrency" onchange="updateToCurrency()">
@@ -166,7 +166,7 @@
 
 <footer>
   
-        <p style="font-size: 22px; color: white; text-align: center;">Explore your currency conversion needs with MDELU Money Transfer.</p>
+        <p style="font-size: 22px; color: white; text-align: center;">Explore your currency conversion needs with RBLU Money Transfer.</p>
         
             <p>CHAT TO US</p>
             <a href="https://www.instagram.com/uneza_90?igsh=a3A3YXkydGx6c3h5" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
@@ -176,6 +176,16 @@
 
 <script src="converter.js"></script>
 <script>
+    function updateToCurrency() {
+        const fromCurrency = document.getElementById("fromCurrency").value;
+        const toCurrency = document.getElementById("toCurrency");
+        if (fromCurrency === "RWF") {
+            toCurrency.value = "INR";
+        } else if (fromCurrency === "INR") {
+            toCurrency.value = "RWF";
+        }
+    }
+
     document.getElementById("togglePaymentMethods").onclick = function() {
         const paymentInfo = document.getElementById("paymentInfo");
         if (paymentInfo.style.display === "none") {
