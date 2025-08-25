@@ -10,8 +10,8 @@ function convertCurrency() {
     }
 
     const exchangeRates = {
-        "RWF_INR": 0.0576, // 1 RWF = 0.060 INR
-        "INR_RWF": 14.30,   // 1 INR = 14.57 RWF
+        "RWF_INR": 0.060, // 1 RWF = 0.060 INR
+        "INR_RWF": 14.80,   // 1 INR = 14.57 RWF
     };
 
     let conversionKey = `${fromCurrency}_${toCurrency}`;
@@ -24,3 +24,4 @@ function convertCurrency() {
         document.getElementById("result").innerHTML = "The currencies you have selected are not supported.";
     }
 }
+
