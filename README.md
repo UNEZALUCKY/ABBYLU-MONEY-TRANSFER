@@ -1,2 +1,2 @@
-# MDELU-MONEY-TRANSFER
-Explore your currency conversion needs with MDELU Money Transfer.
+# ABBYLU-MONEY-TRANSFER
+Explore your currency conversion needs with ABBYLU Money Transfer.
